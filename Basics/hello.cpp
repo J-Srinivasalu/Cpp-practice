@@ -157,9 +157,7 @@ int binarySearch(int arr[], int n, int target, bool findFirst){
 			}
 		}
 	}
-	return ans;
-}
-
+	return ans;}
 void merge(int arr[], int l, int m, int r){
 	int mix[r-l+1];
 	int i = l, j = m+1, k = 0;
@@ -180,37 +178,7 @@ void merge(int arr[], int l, int m, int r){
 	k = l;
 	for(int value:mix){
 		arr[k++] = value;
-	}
-
-}
-class BT{
-public: 
-	int i=-1;
-
-	Node buildBT(int arr[]){
-		i++;
-		if(arr[i] == -1){
-			return NULL;
-		}
-		Node node = Node(arr[i]);
-		node.left = buildBT(arr);
-		node.right = buildBT(arr);
-
-		return node;
-	}
-};
-class Node{
-public:
-	int val;
-	Node left;
-	Node right;
-	Node(int val){
-		this.val = val;
-		this.left = NULL;
-		this.right = NULL;
-	}
-};
-
+	}}
 void preTraversal(Node root){
 
 	if(root == NULL){
@@ -219,9 +187,7 @@ void preTraversal(Node root){
 
 	cout<< root.val<< " ";
 	preTraversal(root.left);
-	preTraversal(root.right);
-}
-
+	preTraversal(root.right);}
 void mergeSort(int arr[], int l, int r){
 	if(l<r){
 		int mid = (l+r)/2;
@@ -230,8 +196,7 @@ void mergeSort(int arr[], int l, int r){
 		mergeSort(arr, mid+1, r);
 
 		merge(arr, l , mid, r);
-	}
-}
+	}}
 int main(){
 	int n = 7;
 	int arr[n] = {1,2,3,-1,-1,4,-1,-1, 5, -1,6, -1,-1};
